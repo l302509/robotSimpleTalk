@@ -1,0 +1,11 @@
+2018-05-18 16:44:10,506 INFO (DirectJDKLog.java:180)- Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-18 16:44:10,525 INFO (FrameworkServlet.java:489)- FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-18 16:44:10,582 INFO (FrameworkServlet.java:508)- FrameworkServlet 'dispatcherServlet': initialization completed in 56 ms
+2018-05-18 16:44:10,635 INFO (HelloController.java:32)- input:你叫什么？
+2018-05-18 16:44:10,694 INFO (HelloController.java:80)- output:我叫小蓝。
+2018-05-18 16:44:58,014 INFO (HelloController.java:32)- input:你叫什么
+2018-05-18 16:45:39,419 INFO (HelloController.java:80)- output:我不知道怎么回答，你可以教教我。像下面这样：<br/> 教学模式<br/>问题：你叫什么？回答：我叫小蓝。
+2018-05-18 16:47:20,709 INFO (StartupInfoLogger.java:48)- Starting App on lijiepeng-pc with PID 10596 (D:\0_workspace_mytest\parentDemo\target\classes started by x_lilong in D:\0_workspace_mytest\parentDemo)
+2018-05-18 16:47:20,713 INFO (SpringApplication.java:597)- The following profiles are active: dev
+2018-05-18 16:47:20,776 INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@56b87a95: startup date [Fri May 18 16:47:20 CST 2018]; root of context hierarchy
+2018-05-18 16:47:21,167 INFO (Version.java:30)- HV000001: Hibernate Validator 5.3.6.Final

@@ -1,0 +1,13 @@
+2018-05-18 16:41:50,552 INFO (HelloController.java:80)- output:我叫小蓝啊！
+2018-05-18 16:42:10,242 INFO (HelloController.java:32)- input:教学模式 问题：你叫什么？回答：我叫小蓝，你呢？
+2018-05-18 16:42:10,252 INFO (HelloController.java:59)- output:好的，知道了！你可以试着问一下：你叫什么？
+2018-05-18 16:42:15,322 INFO (HelloController.java:32)- input:你叫什么
+2018-05-18 16:42:15,323 INFO (HelloController.java:80)- output:我不知道怎么回答，你可以教教我。像下面这样：<br/> 教学模式<br/>问题：你叫什么？回答：我叫小蓝。
+2018-05-18 16:42:28,536 INFO (HelloController.java:32)- input:你叫什么？
+2018-05-18 16:42:28,537 INFO (HelloController.java:80)- output:我叫小蓝，你呢？
+2018-05-18 16:42:36,217 INFO (HelloController.java:32)- input:你叫什么
+2018-05-18 16:42:36,219 INFO (HelloController.java:80)- output:我不知道怎么回答，你可以教教我。像下面这样：<br/> 教学模式<br/>问题：你叫什么？回答：我叫小蓝。
+2018-05-18 16:43:23,213 INFO (StartupInfoLogger.java:48)- Starting App on lijiepeng-pc with PID 11556 (D:\0_workspace_mytest\parentDemo\target\classes started by x_lilong in D:\0_workspace_mytest\parentDemo)
+2018-05-18 16:43:23,220 INFO (SpringApplication.java:597)- The following profiles are active: dev
+2018-05-18 16:43:23,304 INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6046e56f: startup date [Fri May 18 16:43:23 CST 2018]; root of context hierarchy
+2018-05-18 16:43:23,747 INFO (Version.java:30)- HV000001: Hibernate Validator 5.3.6.Final

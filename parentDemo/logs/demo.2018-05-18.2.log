@@ -1,0 +1,8 @@
+2018-05-18 16:36:49,258 INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-18 16:36:49,262 INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-18 16:36:49,333 INFO (AbstractUrlHandlerMapping.java:362)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-18 16:36:49,761 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2018-05-18 16:36:49,851 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8081"]
+2018-05-18 16:36:49,937 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2018-05-18 16:36:49,987 INFO (TomcatEmbeddedServletContainer.java:216)- Tomcat started on port(s): 8081 (http)
+2018-05-18 16:36:49,994 INFO (StartupInfoLogger.java:57)- Started App in 6.243 seconds (JVM running for 6.766)

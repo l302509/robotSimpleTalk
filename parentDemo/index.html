@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>聊天机器人</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		ul,li{
+			list-style: none
+		}
+		.main{
+			//width: 768px;
+			//margin: 50px auto;
+			border: 1px solid #000;
+			position: absolute;
+			height: 500px;
+			overflow: hidden;
+			width: 768px;
+			top:0;
+			left: 50%;
+			transform: translate(-50%);
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		.main .content li{
+			margin-bottom: 15px;
+		}
+		.foot{
+			position: fixed;
+			top: 502px;
+			left: 0;
+			border: 1px solid #000;
+			height: 40px;
+			line-height: 40px;
+			display: flex;
+			justify-content: space-between;
+			width: 768px;
+			left: 50%;
+			transform: translate(-50%);
+			border-top: none;
+			//border-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			overflow: hidden;
+		}
+		@media screen and (max-width:767px){
+			.main,.foot{
+				width:99%
+			}
+			.foot{
+				width:99%
+			}
+		}
+		 
+		.main .content{
+			padding:10px; 
+			height: 500px;
+			width: 100%;	
+			overflow: scroll;
+			align-items: flex-end;
+			box-sizing: border-box;
+		}
+		 .foot #btn{
+			width: 150px;
+			text-align: center;
+			background-color: #76EEC6;
+			border-bottom-left-radius: 4.5px;
+			border-top-left-radius: 5.5px;
+			//padding-left: 120px;
+		}
+		#list{
+			width:100%;
+   
+		}
+		 .foot input{
+			width: 500px;
+			padding-left: 20px
+		}
+		.main .content .l{
+			text-align: left;
+			display: flex;
+    		align-items: flex-start;
+		}
+		.main .content span{
+			overflow:hidden
+		}
+		.main .content span#textR{
+		    margin-right: 5px;
+			margin-left: 18%;
+			text-align: left;
+		}
+		.main .content span#textL{
+		    margin-left: 5px;
+			margin-right: 18%;
+			text-align: left;
+		}
+		.main .content .r{
+			text-align: right;
+			display: flex;
+			justify-content: flex-start;
+		    align-items: flex-start;
+		    flex-direction: row-reverse;
+		}
+		input{
+			border: none
+		}
+		img {
+			width: 30px;
+		}
+		img#robotA{
+			margin-right: 5px
+		}
+		img#robotB{
+			margin-left: 5px
+		}
+	</style>
+	<script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="content" id="content">
+			<ul id="list">
+			<li class="l">
+				<img id="robotA" src="http://i4.bvimg.com/646108/47dd25cda11928b0.png" alt="">
+				<span id = "textL">你好，欢迎来和我聊天！</span>
+			</li>
+			</ul>
+		</div>
+		
+	</div>
+	<div class="foot">
+			<input id="msg" type="text">
+			<div id="btn"><span> 发送</span></div>
+		</div>
+</body>
+<script>
+$(document).keyup(function(event){
+  if(event.keyCode ==13){
+    $("#btn").trigger("click");
+  }
+});
+$('#btn').click(function(){
+	if(!$('#msg').val()) {
+		//alert('不可为空')
+		return
+	}
+	var str = $('#msg').val();
+	$('#list').append('\
+			<li class="r">\
+				<img id="robotB" src="https://gw.alipayobjects.com/os/q/cms/images/jcl9rb8a/bf8c9f42-ee6a-4585-a9c9-fddf217dcbdc_w48_h48.png" alt="">\
+				<span id= "textR">'+$('#msg').val()+'</span>\
+			</li>\
+		')
+		var list = document.getElementById('content')
+		list.scrollTop = list.scrollHeight
+	$('#msg').val('')
+	$.ajax({
+		url:'http://120.79.86.193/demo/hello/say',
+		//url:'http://localhost:8081/hello/say',
+		type:'POST',
+		data:{
+			str:str
+		},
+		//dataType:'json',
+		success:function(data){
+			console.log(data)
+			setTimeout(function(){
+			$('#list').append('\
+				<li class="l">\
+					<img id="robotA" src="http://i4.bvimg.com/646108/47dd25cda11928b0.png" alt="">\
+					<span id = "textL">'+data+'</span>\
+				</li>\
+			')
+			var list = document.getElementById('content')
+			list.scrollTop = list.scrollHeight
+			},50);
+			
+		
+		
+		},
+		error:function(){
+			console.log('error')
+		}
+	})
+})
+</script>
+</html>

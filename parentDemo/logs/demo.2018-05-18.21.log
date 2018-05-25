@@ -1,0 +1,11 @@
+2018-05-18 17:09:51,123 INFO (TomcatEmbeddedServletContainer.java:92)- Tomcat initialized with port(s): 8081 (http)
+2018-05-18 17:09:51,151 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-18 17:09:51,169 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
+2018-05-18 17:09:51,170 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-05-18 17:09:51,344 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2018-05-18 17:09:51,345 INFO (EmbeddedWebApplicationContext.java:276)- Root WebApplicationContext: initialization completed in 1869 ms
+2018-05-18 17:09:51,695 INFO (ServletRegistrationBean.java:190)- Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-18 17:09:51,700 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-18 17:09:51,701 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-18 17:09:51,701 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-18 17:09:51,702 INFO (AbstractFilterRegistrationBean.java:258)- Mapping filter: 'requestContextFilter' to: [/*]

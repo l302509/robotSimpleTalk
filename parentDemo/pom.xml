@@ -1,0 +1,131 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>MySpringBoot</groupId>
+	<artifactId>parentDemo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>parentDemo</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<!-- spring boot基本环境 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.13.RELEASE</version>
+	</parent>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.41</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>MyDemoSpringboot</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+					<includes>
+						<include>src/test/*.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin><!-- 打包排除依赖包和配置文件 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<!-- //指定依赖的jar包相对于本程序jar的位置 -->
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>MySpringBoot.parentDemo.App</mainClass>
+							<!-- //指定Springboot程序启动类 -->
+						</manifest>
+						<manifestEntries>
+							<Class-Path>./</Class-Path><!-- 添加classpath缺少的内容 -->
+						</manifestEntries>
+					</archive>
+					<excludes>
+						<exclude>*.yml</exclude>
+						<exclude>*.properties</exclude>
+						<exclude>logback.xml</exclude>
+						<!-- //指定打包时要排除的文件,支持正则 -->
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- 将依赖jar包复制到指定位置 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<!-- 资源文件的包含和排除 -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>**/.svn/*</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<excludes>
+					<exclude>**/.svn/*</exclude>
+				</excludes>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+</project>
