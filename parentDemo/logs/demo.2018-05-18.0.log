@@ -1,8 +1,0 @@
-2018-05-18 16:36:44,839 INFO (StartupInfoLogger.java:48)- Starting App on lijiepeng-pc with PID 11576 (D:\0_workspace_mytest\parentDemo\target\classes started by x_lilong in D:\0_workspace_mytest\parentDemo)
-2018-05-18 16:36:44,846 INFO (SpringApplication.java:597)- The following profiles are active: dev
-2018-05-18 16:36:45,009 INFO (AbstractApplicationContext.java:583)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e92abdf: startup date [Fri May 18 16:36:45 CST 2018]; root of context hierarchy
-2018-05-18 16:36:45,846 INFO (Version.java:30)- HV000001: Hibernate Validator 5.3.6.Final
-2018-05-18 16:36:47,836 INFO (TomcatEmbeddedServletContainer.java:92)- Tomcat initialized with port(s): 8081 (http)
-2018-05-18 16:36:47,861 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8081"]
-2018-05-18 16:36:47,886 INFO (DirectJDKLog.java:180)- Starting service [Tomcat]
-2018-05-18 16:36:47,887 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.5.31

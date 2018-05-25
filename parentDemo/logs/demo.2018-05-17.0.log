@@ -1,4 +1,0 @@
-2018-05-17 09:16:06,485 INFO (StartupInfoLogger.java:48)- Starting App on lijiepeng-pc with PID 10308 (D:\0_workspace_mytest\parentDemo\target\classes started by x_lilong in D:\0_workspace_mytest\parentDemo)
-2018-05-17 09:16:06,492 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.13.RELEASE, Spring v4.3.17.RELEASE
-2018-05-17 09:16:06,493 INFO (SpringApplication.java:597)- The following profiles are active: dev
-2018-05-17 09:16:09,675 INFO (StartupInfoLogger.java:57)- Started App in 3.82 seconds (JVM running for 4.218)
